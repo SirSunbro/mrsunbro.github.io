@@ -1,3 +1,259 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Designer Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:#ffffff;
+line-height:1.6;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+z-index:1000;
+}
+
+header h1{
+font-size:22px;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00e0ff;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+background:linear-gradient(120deg,#111,#1a1a1a);
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#00e0ff;
+}
+
+.hero p{
+margin-bottom:20px;
+max-width:500px;
+}
+
+.btn{
+padding:12px 25px;
+background:#00e0ff;
+border:none;
+color:#000;
+font-weight:bold;
+cursor:pointer;
+border-radius:4px;
+text-decoration:none;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.skill{
+background:#1e1e1e;
+padding:10px 20px;
+border-radius:20px;
+font-size:14px;
+}
+
+.portfolio{
+text-align:center;
+}
+
+.portfolio h2{
+margin-bottom:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px 0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+margin-top:40px;
+font-size:14px;
+color:#777;
+}
+
+@media(max-width:800px){
+
+.hero h2{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>3D Designer</h1>
+<nav>
+<a href="#home">Главная</a>
+<a href="#about">Обо мне</a>
+<a href="#portfolio">Работы</a>
+<a href="#contact">Контакты</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h2>Привет, я <span>3D Artist</span></h2>
+<p>Создаю реалистичные 3D-модели, рендеры и визуализации для игр, брендов и рекламы.</p>
+<a href="#portfolio" class="btn">Смотреть работы</a>
+</section>
+
+<section class="about" id="about">
+
+<div>
+<h2>Обо мне</h2>
+<p>
+Я 3D-дизайнер, специализирующийся на моделировании, текстурировании и визуализации.
+Работаю с продуктовой визуализацией, игровыми ассетами и концепт-артом.
+</p>
+
+<div class="skills">
+<div class="skill">Blender</div>
+<div class="skill">Cinema 4D</div>
+<div class="skill">Maya</div>
+<div class="skill">Substance Painter</div>
+<div class="skill">ZBrush</div>
+<div class="skill">Unreal Engine</div>
+</div>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee" alt="3D work">
+
+</section>
+
+<section class="portfolio" id="portfolio">
+
+<h2>Мои работы</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1633412802994-5c058f151b66">
+<img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe">
+<img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead">
+<img src="https://images.unsplash.com/photo-1614854262318-831574f15f1f">
+<img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679">
+<img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca">
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Контакты</h2>
+
+<p>Email: рабочий эмейл@mail.ru</p>
+<p>Artstation: artstation.com/username</p>
+
+
+<a class="btn" href="mailto:yourmail@gmail.com">Написать мне</a>
+
+</section>
+
+<footer>
+© 2026 3D Designer Portfolio
+</footer>
+
+<script>
+
+document.querySelectorAll('nav a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault()
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior:'smooth'
+})
+})
+})
+
+</script>
+
+</body>
+</html>
